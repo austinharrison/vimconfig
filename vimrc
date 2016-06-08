@@ -168,3 +168,21 @@ let g:ctrlp_working_path_mode = 2
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Code Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
