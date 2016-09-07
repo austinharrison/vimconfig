@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
 
 " colorschemes
 Plugin 'chriskempson/base16-vim'
@@ -88,7 +89,7 @@ set background=dark
 "colorscheme base16-default 
 
 set number
-set relativenumber
+"set relativenumber
 
 set autoindent " automatically set indent of new line
 set smartindent
@@ -99,7 +100,7 @@ set laststatus=2 " show the satus line all the time
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-map <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
+map <leader>ev :e! ~/.vim/vimrc<cr> " edit ~/.vimrc
 
 map <leader>wc :wincmd q<cr>
 
@@ -173,16 +174,20 @@ let g:airline_powerline_fonts = 0
 " => Code Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
+au BufNewFile,BufRead *.js
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
     \ set shiftwidth=2
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+au BufNewFile,BufRead *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
