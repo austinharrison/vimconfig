@@ -18,6 +18,8 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/syntastic'
 
 " colorschemes
 Plugin 'chriskempson/base16-vim'
@@ -170,6 +172,11 @@ let g:ctrlp_working_path_mode = 2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
 
+"Syntastic settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Code Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
